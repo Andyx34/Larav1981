@@ -69,4 +69,7 @@ class CursoController extends Controller
         $curso->delete();
         return redirect()->route('curso.listar');
     }
+    public function prueba (){
+        
+    }
 }
