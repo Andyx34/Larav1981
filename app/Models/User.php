@@ -50,7 +50,9 @@ class User extends Authenticatable
         //$profile = Profile::where('user_id',$this->id)->first();
        return $this->hasOne('App\Models\Profile');
    }
-   
+   public function posts(){
+    return $this->hasMany('App\Models\Post');
+   }
    public function roles(){
     return $this->belongsToMany('App\Models\Role');
    }
