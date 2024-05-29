@@ -44,4 +44,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    //  Relacion Uno A Uno
+    public function profile(){
+        //$profile = Profile::where('user_id',$this->id)->first();
+       return $this->hasOne('App\Models\Profile');
+   }
+   
+   public function roles(){
+    return $this->belongsToMany('App\Models\Role');
+   }
 }
